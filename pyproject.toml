@@ -1,0 +1,34 @@
+[project]
+name = "klcquant"
+version = "0.1.0"
+description = "Experimental adaptive tensor importance and dynamic quantization framework for large transformer models."
+requires-python = ">=3.10"
+dependencies = [
+  "torch",
+  "transformers",
+  "safetensors",
+  "numpy",
+  "tqdm",
+  "matplotlib",
+  "fastapi==0.115.14",
+  "uvicorn[standard]==0.34.3",
+]
+
+[project.scripts]
+klcquant = "klcquant.benchmark_runner:main"
+klcquant-heatmap = "klcquant.tensor_heatmap:main"
+klcquant-quantize = "klcquant.streamed_quant_runner:main"
+klcquant-eval = "klcquant.prompt_eval_runner:main"
+klcquant-autoreg = "klcquant.autoregressive_runner:main"
+klcquant-calibrate = "klcquant.runtime_sensitivity_probe:main"
+klcquant-orchestrate = "klcquant.compression_orchestrator:main"
+klcquant-survive = "klcquant.adaptive_recovery_runner:main"
+klcquant-interactive = "klcquant.interactive_inference_runner:main"
+klcquant-diagnose = "klcquant.executor_diagnostic_runner:main"
+klcquant-rope-validate = "klcquant.rope_validation_runner:main"
+klcquant-hot-residency = "klcquant.hot_residency_runner:main"
+klcquant-expert-locality = "klcquant.expert_locality_benchmark:main"
+klcquant-serve = "klcquant.inference_server:main"
+
+[tool.setuptools]
+packages = ["klcquant"]
