@@ -1,3 +1,5 @@
+# This is experemental
+This virsion of klcquant is experemental and unfinished because i ran out of time to work on it. it needs some work but is currently functional.
 # KLCQUANT
 
 KLCQUANT is an experimental Python research framework for adaptive tensor importance analysis and dynamic quantization of large sharded transformer models.
